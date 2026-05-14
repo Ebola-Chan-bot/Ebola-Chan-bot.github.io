@@ -1,13 +1,20 @@
 # Ebola-Chan-bot.github.io
 
-这是一个基于 GitHub Pages 和 Jekyll 的个人博客。根目录保留原始 Markdown 稿件，发布页通过 ASCII 文件名的文章内容源引入正文，避免 GitHub Pages 的 Jekyll include 对中文文件名报错。
+这是一个基于 Eleventy 和 GitHub Pages Actions 的个人博客。文章源文件使用中文文件名，构建后也发布为中文 URL。
 
 ## 文章发布
 
-- 首页：`index.html`
-- 归档：`archive.html`
-- 已发布文章：`2026-global-anime-observation.md`、`communism-human-greed-first-principles.md`
-- 发布正文源：`_includes/articles/2026-global-anime-observation.md`、`_includes/articles/communism-human-greed-first-principles.md`
-- 原始稿件：`2026全球动漫观察.md`、`共产主义与人性贪婪的第一性原理.md`
+- 首页：`src/index.njk`
+- 归档：`src/归档.njk`
+- 文章源：`src/文章/2026全球动漫观察.md`、`src/文章/共产主义与人性贪婪的第一性原理.md`
+- 发布路径：`/文章/2026全球动漫观察/`、`/文章/共产主义与人性贪婪的第一性原理/`
 
-推送到 `username.github.io` 仓库后，GitHub Pages 会自动构建并发布。
+## 本地开发
+
+```powershell
+npm install
+npm run build
+npm run serve
+```
+
+推送到 `main` 后，`.github/workflows/pages.yml` 会用 Eleventy 构建 `_site` 并部署到 GitHub Pages。

@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: layouts/base.njk
 title: 首页
 description: Ebola-Chan-bot 的个人博客，收录动漫观察、社会议题和长期问题写作。
 ---
-{% assign posts = site.pages | where: 'layout', 'post' | sort: 'date' | reverse %}
-
 <section class="home-hero" aria-labelledby="home-title">
   <p class="eyebrow">个人博客</p>
   <h1 id="home-title">把观察写成可回看的坐标</h1>
@@ -17,15 +15,15 @@ description: Ebola-Chan-bot 的个人博客，收录动漫观察、社会议题�
     <h2 id="latest-title">最新文章</h2>
   </div>
   <div class="article-grid">
-    {% for post in posts %}
+    {% for post in collections.posts %}
       <article class="article-card">
-        <a href="{{ post.url | relative_url }}">
-          <span class="article-category">{{ post.category }}</span>
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.description }}</p>
+        <a href="{{ post.url | url }}">
+          <span class="article-category">{{ post.data.category }}</span>
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.description }}</p>
           <span class="article-meta">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
-            {% if post.reading_time %}<span>{{ post.reading_time }}</span>{% endif %}
+            <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+            {% if post.data.readingTime %}<span>{{ post.data.readingTime }}</span>{% endif %}
           </span>
         </a>
       </article>
