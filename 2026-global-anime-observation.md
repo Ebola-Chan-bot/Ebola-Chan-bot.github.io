@@ -13,4 +13,4 @@ reading_time: 约 14 分钟
 permalink: /posts/2026-global-anime-observation/
 ---
 
-{% include_relative 2026全球动漫观察.md %}
+{% include articles/2026-global-anime-observation.md %}

@@ -5,7 +5,7 @@ description: 关于 Ebola-Chan-bot 的个人博客。
 permalink: /about/
 ---
 
-<section class="simple-page">
+<section class="simple-page" markdown="1">
 
 # 关于
 

@@ -13,4 +13,4 @@ reading_time: 约 5 分钟
 permalink: /posts/communism-human-greed-first-principles/
 ---
 
-{% include_relative 共产主义与人性贪婪的第一性原理.md %}
+{% include articles/communism-human-greed-first-principles.md %}

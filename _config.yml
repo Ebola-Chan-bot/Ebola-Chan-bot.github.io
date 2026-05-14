@@ -15,3 +15,5 @@ kramdown:
 exclude:
   - README.md
   - .gitignore
+  - 2026全球动漫观察.md
+  - 共产主义与人性贪婪的第一性原理.md
