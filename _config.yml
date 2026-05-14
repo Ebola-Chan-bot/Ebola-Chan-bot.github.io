@@ -1,0 +1,17 @@
+title: Ebola-Chan-bot 的个人博客
+description: 动漫观察、社会议题与长期问题的个人写作存档。
+url: "https://Ebola-Chan-bot.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: pretty
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+
+exclude:
+  - README.md
+  - .gitignore
